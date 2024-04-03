@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Login</title>
+        <!-- Cool Google Fonts -->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+        <!-- Custom CSS -->
+        <style>
+            body {
+                background-image: url('https://i.pinimg.com/originals/42/1a/ee/421aeeed3b06ee7e3beb8e6cb9b681a0.png');
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-attachment: fixed;
+                color: #fff; /* Set text color to white for dark theme */
+            }
+            .container {
+                margin-top: 50px;
+            }
+            .card {
+                box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+                transition: 0.3s;
+                width: 100%;
+                background-color: rgba(0, 0, 0, 0.7); /* Dark background with some transparency */
+                color: #fff; /* Ensure text is white */
+            }
+            .card:hover {
+                box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+            }
+            .card-header {
+                background-color: #007bff;
+                color: white;
+            }
+            .btn-primary, .btn-secondary {
+                margin-top: 10px;
+                background-color: #007bff; /* Ensure buttons are visible against the dark background */
+                border-color: #007bff;
+            }
+            .btn-primary:hover, .btn-secondary:hover {
+                background-color: #0056b3;
+                border-color: #0056b3;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-header">
+                            <h2>Login</h2>
+                        </div>
+                        <div class="card-body">
+                            <form>
+                                <div class="form-group">
+                                    <label for="full_name">Full Name</label>
+                                    <input type="text" class="form-control" id="full_name" placeholder="Full name">
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email address</label>
+                                    <input type="email" class="form-control" id="email" placeholder="Email">
+                                </div>
+                                <div class="form-group">
+                                    <label for="password">Password</label>
+                                    <input type="password" class="form-control" id="password" placeholder="New Password">
+                                </div>
+                                <div class="form-group">
+                                    <label for="What_is_your_fav_sport">Favorite Sport</label>
+                                    <input type="text" class="form-control" id="What_is_your_fav_sport" placeholder="What_is_your_fav_sport">
+                                </div>
+                                <div class="form-group">
+                                    <label for="nickname">Nickname</label>
+                                    <input type="text" class="form-control" id="nickname" placeholder="nickname">
+                                </div>
+                                <div class="form-group">
+                                    <button type="button" class="btn btn-outline-info" onclick="login()">Login</button>
+                                    <button type="button" class="btn btn-outline-info" onclick="register()">Register</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+        <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+
+        <!-- TODO: Add SDKs for Firebase products that you want to use
+             https://firebase.google.com/docs/web/setup#available-libraries -->
+        <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+
+        <!-- jQuery and Bootstrap Bundle (includes Popper) -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+
+        <!-- Our script must be loaded after firebase references -->
+        <script src="login.js"></script>
+
+    </body>
+</html>
